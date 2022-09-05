@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h3 class="py-3 fw-bold">Product Management System</h3>
+
+        <label for="productNameInput">productName : </label>
+        <input type="text" oninput="validateProductName();" class="form-control my-2" id="productNameInput">
+
+        <label for="productPriceInput">productPrice : </label>
+        <input type="number" class="form-control my-2" id="productPriceInput">
+
+        <label for="productCategoryInput">productCategory : </label>
+        <input type="text" class="form-control my-2" id="productCategoryInput">
+
+        <label for="productDescriptionInput">productDescription : </label>
+        <textarea type="text" class="form-control my-2" id="productDescriptionInput"></textarea>
+
+        <button id="addBtn" onclick="addProduct();" class="btn btn-outline-info">Add Product</button>
+        <button id="updateBtn" onclick="updateProducts();" class="btn d-none btn-outline-success">Update</button>
+
+    </div>
+
+    <div class="container p-5">
+        <input oninput="searchProducts(this.value);" type="text" class="form-control" placeholder="Search By Name ..." id="searchForm">
+    </div>
+
+    <div class="container py-3">
+        <table class="table text-center">
+            <thead>
+                <th>Index</th>
+                <th>ProductName</th>
+                <th>ProductPrice</th>
+                <th>ProductCategory</th>
+                <th>ProductDescription</th>
+                <th>Update</th>
+                <th>Delete</th>
+            </thead>
+            <tbody id="tableBody">
+    
+            </tbody>
+        </table>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="js/main.js"></script>
+</body>
+</html>
